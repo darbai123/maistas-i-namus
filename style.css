@@ -176,6 +176,7 @@ body{
     .category{
         width: 100%;
         display: flex;
+       
         margin-bottom: 50px;
         justify-content: center;
     }
@@ -264,6 +265,9 @@ body{
     .nav ul li {
         margin-right: 20px;
     }
+    .category{
+        margin-left: 100px;
+    }
     /* Kitos taisyklės, pritaikytos 1200px ekranui */
     .category .list-items .card-list {
         margin-left: 150px; /* Keičiame margin-left, kad elementai būtų centruoti */
@@ -312,6 +316,8 @@ body{
         font-size: 12px; /* Sumažiname teksto dydį */
         margin-bottom: 10px; /* Keičiame teksto apatinius tarpus */
     }
+   
+  
 }
 @media screen and (max-width: 767px) {
     .category {
@@ -324,7 +330,15 @@ body{
     }
     .category .list-items .card-list {
         grid-template-columns: 1fr;
+      
     }
+    .nav__padetis{
+        .card-list{
+       
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+ 
 }
 
 /* Media query pritaikytas max-width: 620px */
