@@ -313,6 +313,19 @@ body{
         margin-bottom: 10px; /* Keičiame teksto apatinius tarpus */
     }
 }
+@media screen and (max-width: 767px) {
+    .category {
+        flex-direction: column;
+        align-items: center;
+    }
+    .category .list-items {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .category .list-items .card-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Media query pritaikytas max-width: 620px */
 @media screen and (max-width: 620px) {
