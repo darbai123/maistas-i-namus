@@ -16,6 +16,21 @@ body{
     padding: 30px 0;
 }
 
+.nav .nav__padetis{
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav__padetis .signin,
+.nav .nav__padetis .signup {
+    margin-right: 10px;
+}
+
+.nav .nav__padetis i {
+    margin-left: 20px;
+    color: #ff511c;
+    font-size: 20px;
+}
 .nav .logo h1{
     font-weight: 600;
     font-family: sans-serif;
@@ -108,22 +123,44 @@ body{
      
     }
    
-    .content .content-right img{
+    .my-image {
+        mix-blend-mode: multiply;
+        background: transparent;
+        width: 200px;
+        height: 150px;
+        margin-left: -10px;
+        z-index: 999999;
+        transform-origin: center; /* Nustatomas sukimosi taškas */
+    }
+    
+    .content-right img {
+        width: 200px; /* Pakeista iš 400px į 200px */
+        height: 150px; /* Pakeista iš "auto" į 150px */
+        position: relative;
+        user-select: none;
+        background-color: transparent;
+        animation: rotate 10s linear infinite; /* Čia pridedame sukimosi animaciją */
+        transform-origin: center; /* Nustatomas sukimosi taškas */
+    }
+    .rotate-animation {
+        transform-origin: center; /* Nustatomas sukimosi taškas */
+    }
+    
+    .content-right img {
         width: 400px;
         height: auto;
         position: relative;
         user-select: none;
-        animation: rotate 10s linear infinite;
         background-color: transparent;
+        animation: rotate 10s linear infinite; /* Čia pridedame sukimosi animaciją */
     }
- 
+    
     @keyframes rotate {
         0% {
             transform: rotate(0deg);
-            
         }
-        100%{
-            transform:rotate(360deg);
+        100% {
+            transform: rotate(360deg);
         }
     }
     .aa1{
@@ -184,14 +221,7 @@ body{
     .category .card-list .card .food-title{
         padding: 40px 0 10px;
     }
-    .my-image{
-        mix-blend-mode: multiply;
-        background: transparent;
-        width: 200px;
-        height: 150px;
-        margin-left:-10px ;
-        z-index: 999999;
-    }
+  
     .category .card-list .card .food-title h1{
         text-align: center;
         font-weight: bold;
@@ -221,4 +251,119 @@ body{
 ::-webkit-scrollbar-thumb{
     border-radius: 20px;
     background-color: #ff511c;
+}
+.nav__padetis{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+/* Media query pritaikytas max-width: 1200px */
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 0 50px;
+    }
+    .nav ul li {
+        margin-right: 20px;
+    }
+    /* Kitos taisyklės, pritaikytos 1200px ekranui */
+    .category .list-items .card-list {
+        margin-left: 150px; /* Keičiame margin-left, kad elementai būtų centruoti */
+    }
+    .content .content-left .info h2 {
+        font-size: 40px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 20px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 16px; /* Sumažiname teksto dydį */
+        margin-bottom: 20px; /* Keičiame teksto apatinius tarpus */
+    }
+}
+
+/* Media query pritaikytas max-width: 1080px */
+@media screen and (max-width: 1080px) {
+    body {
+        margin: 0 20px;
+    }
+    .nav ul li {
+        margin-right: 10px;
+    }
+    .content .content-left .info h2 {
+        font-size: 36px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 15px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 14px; /* Sumažiname teksto dydį */
+        margin-bottom: 15px; /* Keičiame teksto apatinius tarpus */
+    }
+}
+
+/* Media query pritaikytas max-width: 880px */
+@media screen and (max-width: 880px) {
+    body {
+        margin: 0 15px;
+    }
+    .nav ul li {
+        margin-right: 5px;
+    }
+    .content .content-left .info h2 {
+        font-size: 32px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 10px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 12px; /* Sumažiname teksto dydį */
+        margin-bottom: 10px; /* Keičiame teksto apatinius tarpus */
+    }
+}
+
+/* Media query pritaikytas max-width: 620px */
+@media screen and (max-width: 620px) {
+    body {
+        margin: 0 10px;
+    }
+    .nav ul li {
+        margin-right: 3px;
+    }
+    .content .content-left .info h2 {
+        font-size: 28px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 8px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 11px; /* Sumažiname teksto dydį */
+        margin-bottom: 8px; /* Keičiame teksto apatinius tarpus */
+    }
+}
+
+/* Media query pritaikytas max-width: 480px */
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0 5px;
+    }
+    .nav ul li {
+        margin-right: 2px;
+    }
+    .content .content-left .info h2 {
+        font-size: 24px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 5px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 10px; /* Sumažiname teksto dydį */
+        margin-bottom: 5px; /* Keičiame teksto apatinius tarpus */
+    }
+}
+
+/* Media query pritaikytas max-width: 300px */
+@media screen and (max-width: 300px) {
+    body {
+        margin: 0 2px;
+    }
+    .nav ul li {
+        margin-right: 1px;
+    }
+    .content .content-left .info h2 {
+        font-size: 20px; /* Sumažiname pavadinimo dydį */
+        margin-bottom: 3px; /* Keičiame pavadinimo apatinius tarpus */
+    }
+    .content .content-left .info p {
+        font-size: 8px; /* Sumažiname teksto dydį */
+        margin-bottom: 3px; /* Keičiame teksto apatinius tarpus */
+    }
 }
